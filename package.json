@@ -1,0 +1,35 @@
+{
+	"name": "flatten-overlapping-ranges",
+	"description": "Flatten overlapping ranges into a sequence of sections.",
+	"version": "0.1.0",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"ranges",
+		"overlap",
+		"sections",
+		"flatten",
+		"merge",
+		"intersect"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/flatten-overlapping-ranges",
+	"repository": "derhuerst/flatten-overlapping-ranges",
+	"bugs": "https://github.com/derhuerst/flatten-overlapping-ranges/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"tap-min": "^1.2.2",
+		"tape": "^4.8.0"
+	},
+	"scripts": {
+		"test": "node test.js | tap-min",
+		"prepublishOnly": "npm test"
+	}
+}
