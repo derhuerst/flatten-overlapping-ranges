@@ -23,8 +23,11 @@
 		"node": ">=6"
 	},
 	"dependencies": {},
-	"devDependencies": {},
+	"devDependencies": {
+		"benchmark": "^2.1.4"
+	},
 	"scripts": {
+		"benchmark": "node benchmark.js",
 		"test": "node test.js",
 		"prepublishOnly": "npm test"
 	}
