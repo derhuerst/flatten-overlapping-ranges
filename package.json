@@ -22,8 +22,7 @@
 	"engines": {
 		"node": ">=6"
 	},
-	"dependencies": {
-	},
+	"dependencies": {},
 	"devDependencies": {},
 	"scripts": {
 		"test": "node test.js",
