@@ -31,7 +31,27 @@ npm install flatten-overlapping-ranges
 ## Usage
 
 ```js
-todo
+const flatten = require('flatten-overlapping-ranges')
+
+const sections = flatten([
+	['A', 0, 7], // start a 0, length of 7
+	['B', 2, 12],
+	['D', 5, 5],
+	['C', 12, 7]
+])
+console.log(sections)
+```
+
+```js
+[
+	[2, ['A']], // length of 2
+	[3, ['A', 'B']],
+	[2, ['A', 'B', 'D']],
+	[3, ['B', 'D']],
+	[2, ['B']],
+	[2, ['C', 'B']],
+	[5, ['c']]
+]
 ```
 
 

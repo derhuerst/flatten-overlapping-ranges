@@ -24,12 +24,9 @@
 	},
 	"dependencies": {
 	},
-	"devDependencies": {
-		"tap-min": "^1.2.2",
-		"tape": "^4.8.0"
-	},
+	"devDependencies": {},
 	"scripts": {
-		"test": "node test.js | tap-min",
+		"test": "node test.js",
 		"prepublishOnly": "npm test"
 	}
 }
