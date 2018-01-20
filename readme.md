@@ -1,5 +1,7 @@
 # flatten-overlapping-ranges
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/derhuerst/flatten-overlapping-ranges.svg)](https://greenkeeper.io/)
+
 **Flatten overlapping ranges into a sequence of sections.**
 
 ```
