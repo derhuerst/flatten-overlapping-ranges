@@ -42,12 +42,14 @@ const flatten = (ranges) => {
 	l = ids.length
 	for (i = 1; i < l; i++) {
 		const index = indexes[i]
-		const lastIndex = i === 0 ? 0 : indexes[i - 1]
+		const lastIndex = indexes[i - 1]
 
-		sections.push([
-			index - lastIndex,
-			Object.keys(state)
-		])
+		if (index > lastIndex) {
+			sections.push([
+				index - lastIndex,
+				Object.keys(state)
+			])
+		}
 		if (types[i] === START) {
 			state[ids[i]] = true
 		} else {

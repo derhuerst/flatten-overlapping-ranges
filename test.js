@@ -35,3 +35,9 @@ for (let i = 0; i < sections.length; i++) {
 	a.strictEqual(actualLength, expectedLength)
 	a.deepStrictEqual(actualIds.sort(), expectedIds.sort())
 }
+
+const sections2 = flatten([
+	[A, 0, 3],
+	[B, 0, 5]
+])
+a.ok(sections2.every(section => section[0] > 0))
