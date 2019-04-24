@@ -40,24 +40,26 @@ const flatten = (ranges) => {
 	state.set(ids[0], true) // initial state
 
 	l = ids.length
-	for (i = 1; i < l; i++) {
-		const index = indexes[i]
-		const lastIndex = indexes[i - 1]
+	function* iterator () {
+		for (i = 1; i < l; i++) {
+			const index = indexes[i]
+			const lastIndex = indexes[i - 1]
 
-		if (index > lastIndex) {
-			sections.push([
-				index - lastIndex,
-				Array.from(state.keys())
-			])
-		}
-		if (types[i] === START) {
-			state.set(ids[i], true)
-		} else {
-			state.delete(ids[i])
+			if (index > lastIndex) {
+				yield [
+					index - lastIndex,
+					Array.from(state.keys())
+				]
+			}
+			if (types[i] === START) {
+				state.set(ids[i], true)
+			} else {
+				state.delete(ids[i])
+			}
 		}
 	}
 
-	return sections
+	return {[Symbol.iterator]: iterator}
 }
 
 module.exports = flatten

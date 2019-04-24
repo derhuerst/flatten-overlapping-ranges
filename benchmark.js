@@ -30,10 +30,10 @@ const tenRanges = [
 
 new Suite()
 .add('4 ranges', function () {
-	flatten(fourRanges)
+	for (const _ of flatten(fourRanges)) {}
 })
 .add('10 ranges', function () {
-	flatten(tenRanges)
+	for (const _ of flatten(tenRanges)) {}
 })
 
 .on('error', (err) => {
