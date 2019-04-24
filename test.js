@@ -5,7 +5,7 @@ const a = require('assert')
 const flatten = require('.')
 
 const A = 'A'
-const B = 'B'
+const B = {some: 'obj'}
 const C = 'C'
 const D = 'D'
 

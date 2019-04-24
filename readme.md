@@ -54,6 +54,15 @@ console.log(sections)
 ]
 ```
 
+Instead of strings as range IDs, you can use anything a [`Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) works with:
+
+```js
+flatten([
+	[{name: 'A'}, 0, 7],
+	[{name: 'B'}, 2, 12]
+])
+```
+
 
 ## Contributing
 

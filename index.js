@@ -36,8 +36,8 @@ const flatten = (ranges) => {
 	}
 
 	const sections = []
-	const state = Object.create(null)
-	state[ids[0]] = true // initial state
+	const state = new Map()
+	state.set(ids[0], true) // initial state
 
 	l = ids.length
 	for (i = 1; i < l; i++) {
@@ -47,13 +47,13 @@ const flatten = (ranges) => {
 		if (index > lastIndex) {
 			sections.push([
 				index - lastIndex,
-				Object.keys(state)
+				Array.from(state.keys())
 			])
 		}
 		if (types[i] === START) {
-			state[ids[i]] = true
+			state.set(ids[i], true)
 		} else {
-			delete state[ids[i]]
+			state.delete(ids[i])
 		}
 	}
 
