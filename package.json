@@ -1,7 +1,7 @@
 {
 	"name": "flatten-overlapping-ranges",
 	"description": "Flatten overlapping ranges into a sequence of sections.",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"main": "index.js",
 	"files": [
 		"index.js"
