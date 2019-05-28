@@ -40,7 +40,7 @@ const sections = flatten([
 	['D', 5, 5],
 	['C', 12, 7]
 ])
-console.log(sections)
+console.log(Array.from(sections))
 ```
 
 ```js
