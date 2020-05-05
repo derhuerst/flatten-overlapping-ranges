@@ -1,34 +1,39 @@
 {
-	"name": "flatten-overlapping-ranges",
-	"description": "Flatten overlapping ranges into a sequence of sections.",
-	"version": "1.0.1",
-	"main": "index.js",
-	"files": [
-		"index.js"
-	],
-	"keywords": [
-		"ranges",
-		"overlap",
-		"sections",
-		"flatten",
-		"merge",
-		"intersect"
-	],
-	"author": "Jannis R <mail@jannisr.de>",
-	"homepage": "https://github.com/derhuerst/flatten-overlapping-ranges",
-	"repository": "derhuerst/flatten-overlapping-ranges",
-	"bugs": "https://github.com/derhuerst/flatten-overlapping-ranges/issues",
-	"license": "ISC",
-	"engines": {
-		"node": ">=8"
-	},
-	"dependencies": {},
-	"devDependencies": {
-		"benchmark": "^2.1.4"
-	},
-	"scripts": {
-		"benchmark": "node benchmark.js",
-		"test": "node test.js",
-		"prepublishOnly": "npm test"
-	}
+  "name": "flatten-overlapping-ranges",
+  "description": "Flatten overlapping ranges into a sequence of sections.",
+  "version": "1.0.1",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "ranges",
+    "overlap",
+    "sections",
+    "flatten",
+    "merge",
+    "intersect"
+  ],
+  "author": "Jannis R <mail@jannisr.de>",
+  "homepage": "https://github.com/derhuerst/flatten-overlapping-ranges",
+  "repository": "derhuerst/flatten-overlapping-ranges",
+  "bugs": "https://github.com/derhuerst/flatten-overlapping-ranges/issues",
+  "license": "ISC",
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "snyk": "^1.319.0"
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.4"
+  },
+  "scripts": {
+    "benchmark": "node benchmark.js",
+    "test": "node test.js",
+    "prepublishOnly": "npm test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
